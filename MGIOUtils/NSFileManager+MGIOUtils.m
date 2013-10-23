@@ -44,13 +44,16 @@
 
 + (NSString *)documentDirectoryPath
 {
-    static NSString *path = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                    NSUserDomainMask, YES) lastObject];
-        NSAssert(path, @"No document directory?");
-    });
+    // The static + dispatch_once approach breaks when used from the pod. WHY?
+//    static NSString *path = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+//                                                    NSUserDomainMask, YES) lastObject];
+//        NSAssert(path, @"No document directory?");
+//    });
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                          NSUserDomainMask, YES) lastObject];
     return path;
 }
 
