@@ -78,6 +78,11 @@
     return [self fileExistsLocally:name withExtension:@"plist"];
 }
 
+- (BOOL)jsonExistsLocally:(NSString *)name
+{
+    return [self fileExistsLocally:name withExtension:@"json"];
+}
+
 #pragma mark - File Exists in Main Bundle
 
 - (BOOL)fileExistsInMainBundle:(NSString *)name withExtension:(NSString *)extension

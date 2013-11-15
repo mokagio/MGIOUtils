@@ -35,5 +35,6 @@
 - (BOOL)fileExistsLocally:(NSString *)name withExtension:(NSString *)extension;
 - (BOOL)fileExistsLocally:(NSString *)name;
 - (BOOL)plistExistsLocally:(NSString *)name;
+- (BOOL)jsonExistsLocally:(NSString *)name;
 
 @end
