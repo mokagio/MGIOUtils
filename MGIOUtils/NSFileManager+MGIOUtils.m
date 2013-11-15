@@ -36,6 +36,11 @@
     return [self pathForFileLocally:name withExtension:@"plist"];
 }
 
++ (NSString *)pathForJSONLocally:(NSString *)name
+{
+    return [self pathForFileLocally:name withExtension:@"json"];
+}
+
 + (NSString *)pathForFileLocally:(NSString *)name withExtension:(NSString *)extension
 {
     return [[self documentDirectoryPath] stringByAppendingPathComponent:

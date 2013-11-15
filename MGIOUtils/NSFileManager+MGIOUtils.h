@@ -26,6 +26,7 @@
 
 + (NSString *)pathForFileLocally:(NSString *)name;
 + (NSString *)pathForPlistLocally:(NSString *)name;
++ (NSString *)pathForJSONLocally:(NSString *)name;
 + (NSString *)pathForFileLocally:(NSString *)name withExtension:(NSString *)extension;
 + (NSString *)documentDirectoryPath;
 
